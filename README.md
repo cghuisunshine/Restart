@@ -23,6 +23,17 @@ python3 -m tools.hunger_reader_pipeline build
 Open `aligned_reader/index.html` after the build. Audio files remain external to
 the HTML in `aligned_reader/audio/`, so keep that directory beside the page.
 Search is available from the magnifying-glass button or with Ctrl/Cmd+F.
+The reader's **Chapter study guide** link opens [study-guide.html](study-guide.html),
+a separate, offline-ready page with summaries for all 30 chapters, narrator filters,
+search, review questions, revealable answer guides, quiz mode, and saved review
+progress. Use **Print / Save PDF** for a complete copy of all chapters and answers.
+The editable study content and page template are in `study/`.
+Regenerate the page with the installed Chapter Tutorial HTML skill:
+
+```bash
+python3 ~/.agents/skills/chapter-tutorial-html/scripts/generate_chapter_html.py --input study/restart-outline.txt --output study-guide.html --template study/study-guide-template.html
+```
+
 Click a word to play from it; double-click a word to pause at that position.
 Use the playback speed selector (0.75×–2×) to adjust narration speed. Your choice
 is remembered across chapters and page reloads.

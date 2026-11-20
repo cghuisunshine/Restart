@@ -1,0 +1,293 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#152b29">
+  <meta name="description" content="Review all 30 chapters of Gordon Korman's Restart with summaries, narrator viewpoints, review questions, and answer guides.">
+  <link rel="icon" href="data:,">
+  <title>{{PAGE_TITLE}}</title>
+  <style>
+    :root { color-scheme:light; --ink:#172e2b; --muted:#536963; --green:#17634d; --line:#d9e2dd; --paper:#fff; --bg:#f2f6f3; }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; scroll-padding-top:24px; }
+    body { margin:0; font:1rem/1.65 ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; color:var(--ink); background:var(--bg); }
+    button,input,select { font:inherit; }
+    a { color:var(--green); text-underline-offset:4px; }
+    button,select,summary { cursor:pointer; }
+    :focus-visible { outline:3px solid #cf8629; outline-offset:4px; }
+    [hidden] { display:none !important; }
+    .skip { position:fixed; top:-100px; left:20px; z-index:5; padding:12px; background:white; }
+    .skip:focus { top:12px; }
+    .sidebar { position:fixed; inset:0 auto 0 0; width:274px; display:flex; flex-direction:column; background:#152b29; color:#e9f1eb; }
+    .brand { padding:29px 24px 20px; border-bottom:1px solid #3b514b; }
+    .eyebrow { margin:0 0 8px; font-size:.875rem; font-weight:700; letter-spacing:.1em; text-transform:uppercase; }
+    .brand .eyebrow { color:#adc7b8; }
+    .brand-title { margin:0; font:700 2rem/1.15 Georgia,serif; letter-spacing:-.04em; }
+    .brand p:last-child { margin:8px 0 0; font-size:.875rem; color:#c0d0c7; }
+    .chapter-nav { flex:1; min-height:0; overflow:auto; padding:16px 12px; }
+    .chapter-nav a { display:flex; gap:12px; align-items:center; padding:8px 12px; color:#e1ebe4; text-decoration:none; border-radius:7px; font-size:.875rem; line-height:1.4; }
+    .chapter-nav a:hover,.chapter-nav a[aria-current="location"] { background:#304c42; color:#fff; }
+    .nav-number { min-width:29px; color:#b7cbbd; font-variant-numeric:tabular-nums; }
+    .chapter-nav a.reviewed .nav-number::after { content:' ✓'; color:#aee2b5; }
+    .sidebar-footer { padding:18px 24px; border-top:1px solid #3b514b; font-size:.875rem; }
+    .sidebar-footer a { color:#d9ecdf; }
+    .page { margin-left:274px; max-width:1570px; padding:32px clamp(22px,5vw,76px) 70px; }
+    .topline { display:flex; justify-content:space-between; align-items:center; gap:20px; margin-bottom:26px; font-size:.875rem; color:var(--muted); }
+    .topline a { font-weight:650; }
+    .hero { position:relative; overflow:hidden; padding:40px 42px; border:1px solid #c7d8cc; border-radius:14px; background:#e5efe5; }
+    .hero::after { content:''; position:absolute; top:-55px; right:-100px; width:330px; height:330px; border:1px solid #b2cbb9; border-radius:50%; box-shadow:0 0 0 35px #dce9dd,0 0 0 36px #b2cbb9; pointer-events:none; opacity:.55; }
+    .hero>* { position:relative; z-index:1; }
+    .hero .eyebrow { color:#3e6552; }
+    h1 { margin:8px 0 12px; font:700 clamp(3rem,6vw,5rem)/1 Georgia,serif; letter-spacing:-.055em; }
+    .hero-sub { margin:0; max-width:540px; font-size:1.125rem; color:#37564a; }
+    .hero-meta { display:flex; flex-wrap:wrap; gap:10px 24px; margin-top:26px; font-size:.875rem; font-weight:650; }
+    .intro { display:grid; grid-template-columns:1fr auto; gap:24px; align-items:center; margin:26px 0; }
+    .intro h2 { margin:0 0 5px; font-size:1.125rem; }
+    .intro p { margin:0; color:var(--muted); }
+    .progress-box { width:180px; font-size:.875rem; color:var(--muted); }
+    progress { display:block; width:100%; height:9px; margin-top:8px; accent-color:var(--green); }
+    .tools { padding:18px; margin:0 0 16px; border:1px solid var(--line); border-radius:12px; background:var(--paper); }
+    .filters { display:grid; grid-template-columns:minmax(0,1fr) 230px; gap:12px; }
+    .field-label { display:block; font-size:.875rem; font-weight:650; margin-bottom:5px; }
+    input[type="search"],select { width:100%; min-height:44px; border:1px solid #bdccc2; border-radius:7px; background:#fff; color:var(--ink); padding:8px 12px; }
+    select { appearance:none; padding-right:35px; background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='m1 1 5 5 5-5' fill='none' stroke='%23172e2b' stroke-width='2'/%3E%3C/svg%3E"); background-repeat:no-repeat; background-position:right 12px center; }
+    .actions { display:flex; align-items:center; flex-wrap:wrap; gap:8px; margin-top:14px; }
+    button { min-height:42px; padding:7px 13px; border:1px solid #bdccc2; border-radius:7px; background:#fff; color:var(--ink); font-size:.875rem; font-weight:650; }
+    button:hover { background:#edf3ed; }
+    .primary { background:var(--green); border-color:var(--green); color:#fff; }
+    .primary:hover { background:#114d3b; }
+    #quizToggle[aria-pressed="true"] { background:#152b29; border-color:#152b29; }
+    .actions .spacer { flex:1; }
+    .result-line { display:flex; flex-wrap:wrap; justify-content:space-between; gap:8px; margin:15px 0; color:var(--muted); font-size:.875rem; }
+    #modeHint { margin:0; }
+    .chapter { margin:0 0 16px; border:1px solid var(--line); border-radius:12px; background:var(--paper); overflow:hidden; scroll-margin-top:20px; }
+    .chapter[open] { border-color:#b5caba; }
+    .chapter>summary { display:flex; align-items:center; gap:18px; padding:21px 24px; list-style:none; }
+    .chapter>summary::-webkit-details-marker { display:none; }
+    .chapter>summary::after { content:'+'; margin-left:auto; color:var(--green); font-size:1.5rem; font-weight:400; }
+    .chapter[open]>summary::after { content:'−'; }
+    .chapter-number { flex-shrink:0; display:grid; place-items:center; width:44px; height:44px; border-radius:9px; background:#edf4ee; color:#376348; font:700 1.25rem/1 Georgia,serif; }
+    .chapter h2 { margin:0; font-size:1.125rem; line-height:1.4; }
+    .narrator { display:block; margin-top:3px; color:var(--muted); font-size:.875rem; }
+    .chapter-body { border-top:1px solid #e5ece6; padding:23px 26px 24px; }
+    .chapter-body h3 { margin:0 0 8px; color:#446257; font-size:.875rem; letter-spacing:.065em; text-transform:uppercase; }
+    .chapter-body p { margin:0 0 17px; }
+    .key-idea { margin:0 0 24px; padding:12px 16px; border-left:3px solid #83aa8d; background:#f2f7f2; color:#37584b; font-size:.9375rem; }
+    .key-idea p { margin:0; }
+    .question { padding:20px; border:1px solid #dae4dd; border-radius:9px; background:#f8faf8; }
+    .question h3 { color:#53675c; }
+    .question>p { margin-bottom:12px; font-weight:600; }
+    .answer>summary { width:fit-content; color:var(--green); font-size:.875rem; font-weight:700; padding:5px 0; }
+    .answer p { margin:10px 0 0; color:#425a50; }
+    .review-label { display:flex; align-items:center; gap:9px; margin-top:20px; font-size:.875rem; font-weight:650; cursor:pointer; }
+    .review-label input { width:18px; height:18px; margin:0; accent-color:var(--green); }
+    .quiz-mode .recap { display:none; }
+    .empty { padding:44px 24px; text-align:center; border:1px dashed #a9c0af; border-radius:12px; }
+    .empty h2 { font-size:1.2rem; margin:0 0 8px; }
+    .empty p { color:var(--muted); }
+    .footer { margin-top:32px; padding-top:20px; border-top:1px solid var(--line); color:var(--muted); font-size:.875rem; }
+    .footer p { margin:5px 0; }
+    .mobile-nav { display:none; }
+    .print-only { display:none; }
+    @media(max-width:1000px) { .sidebar { width:238px; } .page { margin-left:238px; padding:24px; } .hero { padding:30px; } .filters { grid-template-columns:1fr; } }
+    @media(max-width:720px) {
+      .sidebar { display:none; } .page { margin:0; padding:18px 16px 40px; }
+      .topline { margin-bottom:18px; gap:10px; } .hero { padding:28px 24px; }
+      .hero::after { right:-215px; } .hero-sub { font-size:1rem; }
+      .intro { grid-template-columns:1fr; gap:14px; margin:22px 0; } .progress-box { width:100%; }
+      .mobile-nav { display:block; margin-bottom:14px; }
+      .tools { padding:14px; } .actions { gap:7px; } .actions .spacer { display:none; }
+      .chapter>summary { padding:17px 18px; gap:13px; } .chapter-body { padding:20px 18px; }
+      .question { padding:16px; } .result-line { display:block; } #modeHint { margin-top:6px; }
+    }
+    @media(prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } }
+    @media print {
+      @page { margin:17mm; }
+      body { background:white; color:#111; font-size:11pt; }
+      .sidebar,.topline,.tools,.mobile-nav,.progress-box,.result-line,.review-label,.footer,.empty,.skip { display:none !important; }
+      .page { margin:0; padding:0; max-width:none; } .hero { padding:0 0 20px; border:0; background:none; }
+      .hero::after { display:none; } h1 { font-size:38pt; } .hero-meta { margin-top:10px; }
+      .intro { display:block; margin:15px 0; } .intro p { color:#333; }
+      .chapter { break-inside:avoid; margin:14px 0; border:1px solid #bbb; }
+      .chapter[hidden] { display:block !important; } .chapter>summary { padding:12px 16px; }
+      .chapter>summary::after { display:none; } .chapter-body { padding:16px; }
+      .quiz-mode .recap { display:block; } .question { background:none; padding:12px; }
+      .print-only { display:inline; } .chapter-number,.key-idea { background:none; }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to study guide</a>
+  <aside class="sidebar" aria-label="Study guide navigation">
+    <div class="brand"><p class="eyebrow">The reading room</p><p class="brand-title">Restart</p><p>Gordon Korman · Study companion</p></div>
+    <nav class="chapter-nav" id="chapterNav" aria-label="Chapters"></nav>
+    <div class="sidebar-footer"><a href="aligned_reader/index.html">Open the read-along book</a></div>
+  </aside>
+  <main class="page" id="main">
+    <div class="topline"><span>Reading room / Chapter study guide</span><a href="aligned_reader/index.html">Read the book</a></div>
+    <header class="hero">
+      <p class="eyebrow">A study companion</p>
+      <h1>Restart</h1>
+      <p class="hero-sub">One story. Many perspectives. Explore how Chase's choices change the person he becomes.</p>
+      <div class="hero-meta"><span>Gordon Korman</span><span>30 chapters</span><span>Review &amp; discussion</span></div>
+    </header>
+    <div class="intro">
+      <div><h2>Read. Recall. Reflect.</h2><p>Read a chapter, check the summary, then try its question. Use quiz mode to hide the summaries. <strong>Spoilers throughout.</strong></p></div>
+      <div class="progress-box" hidden id="progressBox"><span id="progressText">0 of 30 reviewed</span><progress id="reviewProgress" value="0" max="30" aria-label="Chapters reviewed"></progress></div>
+    </div>
+    <div class="mobile-nav" hidden id="mobileNav"><label class="field-label" for="chapterJump">Jump to a chapter</label><select id="chapterJump"><option value="">Choose a chapter</option></select></div>
+    <section class="tools" aria-label="Study controls" hidden id="tools">
+      <div class="filters">
+        <div><label class="field-label" for="search">Search the guide</label><input type="search" id="search" placeholder="Try a character, event, or theme…" autocomplete="off"></div>
+        <div><label class="field-label" for="narratorFilter">Narrator</label><select id="narratorFilter"><option value="">All narrators</option></select></div>
+      </div>
+      <div class="actions">
+        <button type="button" class="primary" id="quizToggle" aria-pressed="false">Quiz mode</button>
+        <button type="button" id="expandAll">Expand chapters</button>
+        <button type="button" id="collapseAll">Collapse chapters</button>
+        <span class="spacer"></span><button type="button" id="print">Print / Save PDF</button>
+      </div>
+    </section>
+    <div class="result-line" hidden id="resultLine"><span id="resultCount" role="status" aria-live="polite">30 chapters</span><p id="modeHint">Open a chapter to begin. Answer guides are hidden until you reveal them.</p></div>
+    <noscript><p>All summaries, questions, and answer guides are shown below. Enable JavaScript for search, collapsible chapters, and quiz mode.</p></noscript>
+    <div id="chapters">
+{{SECTIONS}}
+    </div>
+    <div class="empty" id="empty" hidden><h2>No matching chapters</h2><p>Try another search or choose a different narrator.</p><button type="button" id="clearFilters">Clear filters</button></div>
+    <footer class="footer"><p>Answer guides are suggested responses. For discussion, support your interpretation with an example from the book.</p><p id="saveStatus">Review progress is saved in this browser. Print includes all 30 chapters and answer guides.</p></footer>
+  </main>
+  <script>
+    (() => {
+      'use strict';
+      const $ = id => document.getElementById(id);
+      const storageKey = 'restart-study-guide-reviewed-v1';
+      let reviewed = new Set();
+      let storageAvailable = true;
+      try {
+        const stored = JSON.parse(localStorage.getItem(storageKey) || '[]');
+        if (Array.isArray(stored)) reviewed = new Set(stored.filter(n => Number.isInteger(n) && n >= 1 && n <= 30));
+      } catch { storageAvailable = false; }
+      const make = (tag, className, text) => {
+        const el = document.createElement(tag);
+        if (className) el.className = className;
+        if (text !== undefined) el.textContent = text;
+        return el;
+      };
+      const chapters = [...document.querySelectorAll('#chapters > section')].map(source => {
+        const heading = source.querySelector('h2').textContent.match(/^(\d+)\s+(.+)$/);
+        const number = Number(heading[1]);
+        const narrator = heading[2];
+        const parts = {};
+        let key;
+        [...source.children].forEach(child => {
+          if (child.tagName === 'H3') { key = child.textContent; parts[key] = []; }
+          else if (key) parts[key].push(child);
+        });
+        const card = make('details', 'chapter');
+        card.id = `chapter-${number}`;
+        card.open = number === 1;
+        const title = make('summary');
+        title.append(make('span', 'chapter-number', String(number).padStart(2, '0')));
+        const titleText = make('div');
+        titleText.append(make('h2', '', `Chapter ${number}`), make('span', 'narrator', `Narrator: ${narrator}`));
+        title.append(titleText);
+        const body = make('div', 'chapter-body');
+        const recap = make('div', 'recap');
+        recap.append(make('h3', '', 'What happens'), ...(parts['Summary'] || []));
+        const idea = make('div', 'key-idea');
+        idea.append(...(parts['Key idea'] || []));
+        recap.append(idea);
+        const question = make('div', 'question');
+        question.append(make('h3', '', 'Check your understanding'), ...(parts['Review question'] || []));
+        const answer = make('details', 'answer');
+        answer.append(make('summary', '', 'Reveal answer guide'), ...(parts['Answer guide'] || []));
+        question.append(answer);
+        const label = make('label', 'review-label');
+        const checkbox = document.createElement('input');
+        checkbox.type = 'checkbox';
+        checkbox.checked = reviewed.has(number);
+        checkbox.setAttribute('aria-label', `Mark chapter ${number} reviewed`);
+        label.append(checkbox, document.createTextNode('I can explain this chapter'));
+        body.append(recap, question, label);
+        card.append(title, body);
+        source.replaceWith(card);
+        const nav = make('a');
+        nav.href = `#${card.id}`;
+        nav.append(make('span', 'nav-number', String(number).padStart(2, '0')), make('span', '', narrator));
+        nav.setAttribute('aria-label', `Chapter ${number}: ${narrator}`);
+        $('chapterNav').append(nav);
+        const option = new Option(`Chapter ${number} · ${narrator}`, card.id);
+        $('chapterJump').add(option);
+        checkbox.addEventListener('change', () => {
+          checkbox.checked ? reviewed.add(number) : reviewed.delete(number);
+          try { localStorage.setItem(storageKey, JSON.stringify([...reviewed])); }
+          catch { storageAvailable = false; }
+          updateProgress();
+        });
+        return { card, nav, option, narrator, number, answer, text:card.textContent.toLowerCase() };
+      });
+      function updateProgress() {
+        $('progressText').textContent = `${reviewed.size} of 30 reviewed`;
+        $('reviewProgress').value = reviewed.size;
+        chapters.forEach(ch => ch.nav.classList.toggle('reviewed', reviewed.has(ch.number)));
+        if (!storageAvailable) $('saveStatus').textContent = 'Browser storage is unavailable. Review progress will last for this session. Print includes all 30 chapters and answer guides.';
+      }
+      const narrators = [...new Set(chapters.map(ch => ch.narrator))].sort();
+      narrators.forEach(name => $('narratorFilter').add(new Option(name, name)));
+      function filterChapters() {
+        const words = $('search').value.trim().toLowerCase().split(/\s+/).filter(Boolean);
+        const narrator = $('narratorFilter').value;
+        let count = 0;
+        chapters.forEach(ch => {
+          const matches = (!narrator || ch.narrator === narrator) && words.every(word => ch.text.includes(word));
+          ch.card.hidden = !matches;
+          ch.nav.hidden = !matches;
+          ch.option.hidden = !matches;
+          if (matches) { count++; if (words.length) ch.card.open = true; }
+        });
+        $('resultCount').textContent = `${count} ${count === 1 ? 'chapter' : 'chapters'}${count === 30 ? '' : ' of 30'}`;
+        $('empty').hidden = count !== 0;
+      }
+      function clearFilters() { $('search').value = ''; $('narratorFilter').value = ''; filterChapters(); }
+      $('search').addEventListener('input', filterChapters);
+      $('narratorFilter').addEventListener('change', filterChapters);
+      $('clearFilters').addEventListener('click', () => { clearFilters(); $('search').focus(); });
+      $('expandAll').addEventListener('click', () => chapters.filter(ch => !ch.card.hidden).forEach(ch => ch.card.open = true));
+      $('collapseAll').addEventListener('click', () => chapters.filter(ch => !ch.card.hidden).forEach(ch => ch.card.open = false));
+      $('quizToggle').addEventListener('click', () => {
+        const active = $('quizToggle').getAttribute('aria-pressed') !== 'true';
+        $('quizToggle').setAttribute('aria-pressed', String(active));
+        $('quizToggle').textContent = active ? 'Exit quiz mode' : 'Quiz mode';
+        document.body.classList.toggle('quiz-mode', active);
+        chapters.forEach(ch => ch.answer.open = false);
+        $('modeHint').textContent = active ? 'Summaries are hidden. Try each question before revealing its answer guide.' : 'Open a chapter to begin. Answer guides are hidden until you reveal them.';
+      });
+      function jumpToHash() {
+        const target = chapters.find(ch => `#${ch.card.id}` === location.hash);
+        if (!target) return;
+        if (target.card.hidden) clearFilters();
+        target.card.open = true;
+        chapters.forEach(ch => ch.nav.removeAttribute('aria-current'));
+        target.nav.setAttribute('aria-current', 'location');
+        $('chapterJump').value = target.card.id;
+        target.card.scrollIntoView({ block:'start' });
+      }
+      $('chapterJump').addEventListener('change', () => { if ($('chapterJump').value) { location.hash = $('chapterJump').value; jumpToHash(); } });
+      $('chapterNav').addEventListener('click', e => { if (e.target.closest('a')) requestAnimationFrame(jumpToHash); });
+      window.addEventListener('hashchange', jumpToHash);
+      let printState;
+      window.addEventListener('beforeprint', () => {
+        if (printState) return;
+        printState = [...document.querySelectorAll('details')].map(el => ({ el, open:el.open }));
+        printState.forEach(({el}) => el.open = true);
+      });
+      window.addEventListener('afterprint', () => { printState?.forEach(({el,open}) => el.open = open); printState = undefined; });
+      $('print').addEventListener('click', () => window.print());
+      ['tools','resultLine','progressBox','mobileNav'].forEach(id => $(id).hidden = false);
+      updateProgress();
+      jumpToHash();
+    })();
+  </script>
+</body>
+</html>
