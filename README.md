@@ -20,6 +20,7 @@ python3 -m tools.hunger_reader_pipeline align
 python3 -m tools.hunger_reader_pipeline build
 ```
 
+Open [content.html](content.html) to choose the read-along book or chapter study guide.
 Open `aligned_reader/index.html` after the build. Audio files remain external to
 the HTML in `aligned_reader/audio/`, so keep that directory beside the page.
 Search is available from the magnifying-glass button or with Ctrl/Cmd+F.

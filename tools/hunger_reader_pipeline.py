@@ -370,7 +370,8 @@ def build_reader_html(manifest: dict) -> str:
     book_slug = re.sub(r"[^a-z0-9]+", "-", manifest["title"].lower()).strip("-")
     if book_slug == "the-hunger-games":
         book_slug = "hunger-games"
-    study_guide_link = ('<p><a href="../study-guide.html">Chapter study guide</a></p>'
+    study_guide_link = ('<p><a href="../content.html">Contents</a></p>\n      '
+                        '<p><a href="../study-guide.html">Chapter study guide</a></p>'
                         if book_slug == "restart" else "")
     return f'''<!doctype html>
 <html lang="en">
