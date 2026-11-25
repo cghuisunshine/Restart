@@ -46,6 +46,11 @@
     .novel-overview h2 { margin:0 0 8px; color:#446257; font-size:1rem; }
     .novel-overview p { margin:0 0 22px; max-width:80ch; }
     .novel-overview p:last-child { margin-bottom:0; }
+    .character-list { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:0 26px; margin:0 0 24px; }
+    .character-list>div { padding:12px 0; border-bottom:1px solid var(--line); break-inside:avoid; }
+    .character-list dt { font-weight:700; }
+    .character-list dd { margin:4px 0 0; color:var(--muted); }
+    .characters-involved { color:#37584b; }
     .intro { display:grid; grid-template-columns:1fr auto; gap:24px; align-items:center; margin:26px 0; }
     .intro h2 { margin:0 0 5px; font-size:1.125rem; }
     .intro p { margin:0; color:var(--muted); }
@@ -102,6 +107,7 @@
       .topline { margin-bottom:18px; gap:10px; } .hero { padding:28px 24px; }
       .hero::after { right:-215px; } .hero-sub { font-size:1rem; }
       .novel-overview { padding:20px 18px; }
+      .character-list { grid-template-columns:1fr; }
       .intro { grid-template-columns:1fr; gap:14px; margin:22px 0; } .progress-box { width:100%; }
       .mobile-nav { display:block; margin-bottom:14px; }
       .tools { padding:14px; } .actions { gap:7px; } .actions .spacer { display:none; }
@@ -141,14 +147,37 @@
       <div class="hero-meta"><span>Gordon Korman</span><span>30 chapters</span><span>Contains spoilers</span></div>
     </header>
     <section class="novel-overview" aria-label="Novel overview">
+      <h2>Character introduction</h2>
+      <dl class="character-list">
+        <div><dt>Chase Ambrose</dt><dd>A popular middle school athlete and former bully. After losing his memory, he must discover who he was and decide who he wants to become.</dd></div>
+        <div><dt>Shoshanna Weber</dt><dd>A determined video club member and Joel's twin sister. She distrusts Chase because of his bullying, then works with him on a documentary.</dd></div>
+        <div><dt>Joel Weber</dt><dd>A gifted pianist whose suffering at the hands of Chase, Aaron, and Bear leads him to leave home for boarding school.</dd></div>
+        <div><dt>Brendan Espinoza</dt><dd>The creative video club president, known for ambitious YouTube stunts. He gives Chase an early chance at friendship and admires Kimberly.</dd></div>
+        <div><dt>Kimberly Tooley</dt><dd>A classmate who joins video club because she likes Chase. Her involvement in Brendan's projects becomes important to the group's friendships.</dd></div>
+        <div><dt>Aaron Hakimian</dt><dd>One of Chase's old football friends and partners in bullying. He resents Chase's new loyalties and tries to protect their shared secrets.</dd></div>
+        <div><dt>Bear Bratsky</dt><dd>Chase and Aaron's intimidating teammate. He continues bullying others and joins Aaron in pressuring Chase to return to their group.</dd></div>
+        <div><dt>Julius Solway</dt><dd>A Korean War veteran and Medal of Honor recipient at Portland Street Assisted Living Residence. His friendship with Chase inspires the documentary <em>Warrior</em>.</dd></div>
+        <div><dt>Hugo Verberg, Mauricia Dunbar, and Barton</dt><dd>Fellow video club members. Their reactions to Chase show the difficulty of trusting someone who once frightened or bullied their group.</dd></div>
+        <div><dt>Ms. DeLeo</dt><dd>The video club's faculty advisor. She welcomes Chase into the club and guides the students' filmmaking.</dd></div>
+        <div><dt>Dr. Fitzwallace and Coach Davenport</dt><dd>The school principal encourages Chase to make a fresh start; the football coach oversees his return to the Hurricanes.</dd></div>
+        <div><dt>Tina Ambrose</dt><dd>Chase and Johnny's mother. She supports Chase's recovery while struggling with how much to tell him about his past wrongdoing.</dd></div>
+        <div><dt>Frank Ambrose</dt><dd>Chase and Johnny's father, a former football champion. He prizes athletic toughness and pushes Chase to return to the field.</dd></div>
+        <div><dt>Johnny Ambrose</dt><dd>Chase's older brother, a college student who supports him after the accident despite Chase's former contempt for him.</dd></div>
+        <div><dt>Corinne and Helene</dt><dd>Chase's stepmother and young half sister. Helene's fear of Chase reveals how his past cruelty affected his family.</dd></div>
+        <div><dt>Dr. Cooperman and Dr. Nguyen</dt><dd>Dr. Cooperman treats Chase after his fall and restricts football; Dr. Nguyen later provides the second opinion sought by Frank.</dd></div>
+        <div><dt>Nurse Duncan, Mrs. Swanson, and Mrs. Kittredge</dt><dd>A nurse and two Portland Street residents. Their interactions with Chase contrast caring service with Aaron and Bear's disrespect.</dd></div>
+        <div><dt>Joey Petronus and Landon Rubio</dt><dd>Football teammates whose treatment of the video club helps expose the tensions between Chase's old crowd and new friends.</dd></div>
+        <div><dt>Mr. and Mrs. Weber</dt><dd>Joel and Shoshanna's protective parents. Their anger at Chase reflects the lasting damage to their family.</dd></div>
+        <div><dt>Other supporting characters</dt><dd>Mrs. Gilbride oversees the music room; Mr. and Mrs. Tottenham are Chase's neighbors; Mr. Landau represents Chase before Judge Garfinkle.</dd></div>
+      </dl>
       <h2>Main theme</h2>
       <p>People can change through the choices they make. Chase's second chance shows that building a better identity requires empathy, honesty, and responsibility for past harm. Trust and forgiveness grow through consistent actions.</p>
       <h2>Summary</h2>
-      <p>In Gordon Korman's <em>Restart</em>, middle school football star Chase Ambrose loses his memory after falling from his roof. As he returns to school, he discovers that he used to be a bully whose behavior left classmates frightened and hurt. His old friends, Aaron and Bear, expect him to return to their group, but Chase develops new friendships through the video club and an assisted living residence.</p>
-      <p>Working on a documentary about veteran Julius Solway, Chase earns Shoshanna Weber's trust, even though he once bullied her brother, Joel. A violent incident at school and Chase's decision to support a lie damage his new friendships. When he learns that he stole Mr. Solway's Medal of Honor before his accident, he recovers it, admits the theft, and faces the consequences. His friends and Mr. Solway support his second chance. By the end, Chase begins bringing his interests in football and filmmaking together while choosing a kinder, more honest life.</p>
+      <p>In Gordon Korman's <em>Restart</em>, middle school football star Chase Ambrose loses his memory after falling from his roof. His mother, Tina, and brother, Johnny, support his recovery, while his father, Frank, pushes him toward football. Chase discovers that he and his old friends, Aaron and Bear, bullied classmates, especially pianist Joel Weber. Brendan Espinoza offers him friendship and a place in Ms. DeLeo's video club, where he also gets to know Kimberly Tooley and Joel's protective twin sister, Shoshanna.</p>
+      <p>Through community service at Portland Street, Chase befriends veteran Julius Solway and works with Shoshanna on <em>Warrior</em>, a documentary about his life. Aaron and Bear's attack on Brendan, Joel, and Kimberly leads to an accidental injury and Chase's dishonest cover story, damaging his new friendships. Brendan's surviving footage helps Joel, Shoshanna, and Kimberly understand what happened. Meanwhile, Chase discovers that he stole Mr. Solway's Medal of Honor before his accident, recovers it, and confesses. His family, friends, teachers, and Mr. Solway support his second chance. By the end, Chase brings football and filmmaking together, Joel gains confidence, and Brendan values his relationships more than fame.</p>
     </section>
     <div class="intro">
-      <div><h2>Each chapter</h2><p>Review the narrator, summary, highlights, and important lesson, then try the question. Use quiz mode to hide the chapter notes. <strong>Spoilers throughout, including the novel summary above.</strong></p></div>
+      <div><h2>Each chapter</h2><p>Review the narrator, characters involved, summary, highlights, and important lesson, then try the question. Use quiz mode to hide the chapter notes. <strong>Spoilers throughout, including the novel summary above.</strong></p></div>
       <div class="progress-box" hidden id="progressBox"><span id="progressText">0 of 30 reviewed</span><progress id="reviewProgress" value="0" max="30" aria-label="Chapters reviewed"></progress></div>
     </div>
     <div class="mobile-nav" hidden id="mobileNav"><label class="field-label" for="chapterJump">Jump to a chapter</label><select id="chapterJump"><option value="">Choose a chapter</option></select></div>
@@ -210,6 +239,9 @@
         const body = make('div', 'chapter-body');
         const recap = make('div', 'recap');
         recap.append(make('h3', '', 'Narrator'), ...(parts['Narrator'] || []));
+        const characters = make('div', 'characters-involved');
+        characters.append(make('h3', '', 'Characters involved'), ...(parts['Characters involved'] || []));
+        recap.append(characters);
         recap.append(make('h3', '', 'Summary'), ...(parts['Summary'] || []));
         recap.append(make('h3', '', 'Highlights'), ...(parts['Highlights'] || []));
         recap.querySelectorAll('ul').forEach(list => list.classList.add('highlights'));
