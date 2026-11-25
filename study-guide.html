@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#152b29">
-  <meta name="description" content="Review all 30 chapters of Gordon Korman's Restart with summaries, narrator viewpoints, review questions, and answer guides.">
+  <meta name="description" content="Explore Restart by Gordon Korman: the novel's main theme and summary, plus each chapter's narrator, summary, highlights, and important lesson.">
   <link rel="icon" href="data:,">
   <title>Restart — Chapter Study Guide</title>
   <style>
@@ -42,6 +42,10 @@
     h1 { margin:8px 0 12px; font:700 clamp(3rem,6vw,5rem)/1 Georgia,serif; letter-spacing:-.055em; }
     .hero-sub { margin:0; max-width:540px; font-size:1.125rem; color:#37564a; }
     .hero-meta { display:flex; flex-wrap:wrap; gap:10px 24px; margin-top:26px; font-size:.875rem; font-weight:650; }
+    .novel-overview { margin-top:22px; padding:26px; border:1px solid var(--line); border-radius:12px; background:var(--paper); }
+    .novel-overview h2 { margin:0 0 8px; color:#446257; font-size:1rem; }
+    .novel-overview p { margin:0 0 22px; max-width:80ch; }
+    .novel-overview p:last-child { margin-bottom:0; }
     .intro { display:grid; grid-template-columns:1fr auto; gap:24px; align-items:center; margin:26px 0; }
     .intro h2 { margin:0 0 5px; font-size:1.125rem; }
     .intro p { margin:0; color:var(--muted); }
@@ -73,6 +77,8 @@
     .chapter-body { border-top:1px solid #e5ece6; padding:23px 26px 24px; }
     .chapter-body h3 { margin:0 0 8px; color:#446257; font-size:.875rem; letter-spacing:.065em; text-transform:uppercase; }
     .chapter-body p { margin:0 0 17px; }
+    .highlights { margin:0 0 22px; padding-left:22px; }
+    .highlights li+li { margin-top:6px; }
     .key-idea { margin:0 0 24px; padding:12px 16px; border-left:3px solid #83aa8d; background:#f2f7f2; color:#37584b; font-size:.9375rem; }
     .key-idea p { margin:0; }
     .question { padding:20px; border:1px solid #dae4dd; border-radius:9px; background:#f8faf8; }
@@ -95,6 +101,7 @@
       .sidebar { display:none; } .page { margin:0; padding:18px 16px 40px; }
       .topline { margin-bottom:18px; gap:10px; } .hero { padding:28px 24px; }
       .hero::after { right:-215px; } .hero-sub { font-size:1rem; }
+      .novel-overview { padding:20px 18px; }
       .intro { grid-template-columns:1fr; gap:14px; margin:22px 0; } .progress-box { width:100%; }
       .mobile-nav { display:block; margin-bottom:14px; }
       .tools { padding:14px; } .actions { gap:7px; } .actions .spacer { display:none; }
@@ -108,6 +115,7 @@
       .sidebar,.topline,.tools,.mobile-nav,.progress-box,.result-line,.review-label,.footer,.empty,.skip { display:none !important; }
       .page { margin:0; padding:0; max-width:none; } .hero { padding:0 0 20px; border:0; background:none; }
       .hero::after { display:none; } h1 { font-size:38pt; } .hero-meta { margin-top:10px; }
+      .novel-overview { padding:0; border:0; } .novel-overview h2 { break-after:avoid; }
       .intro { display:block; margin:15px 0; } .intro p { color:#333; }
       .chapter { break-inside:avoid; margin:14px 0; border:1px solid #bbb; }
       .chapter[hidden] { display:block !important; } .chapter>summary { padding:12px 16px; }
@@ -127,13 +135,20 @@
   <main class="page" id="main">
     <div class="topline"><span><a href="content.html">Contents</a> / Chapter study guide</span><a href="aligned_reader/index.html">Read the book</a></div>
     <header class="hero">
-      <p class="eyebrow">A study companion</p>
+      <p class="eyebrow">Novel</p>
       <h1>Restart</h1>
       <p class="hero-sub">One story. Many perspectives. Explore how Chase's choices change the person he becomes.</p>
-      <div class="hero-meta"><span>Gordon Korman</span><span>30 chapters</span><span>Review &amp; discussion</span></div>
+      <div class="hero-meta"><span>Gordon Korman</span><span>30 chapters</span><span>Contains spoilers</span></div>
     </header>
+    <section class="novel-overview" aria-label="Novel overview">
+      <h2>Main theme</h2>
+      <p>People can change through the choices they make. Chase's second chance shows that building a better identity requires empathy, honesty, and responsibility for past harm. Trust and forgiveness grow through consistent actions.</p>
+      <h2>Summary</h2>
+      <p>In Gordon Korman's <em>Restart</em>, middle school football star Chase Ambrose loses his memory after falling from his roof. As he returns to school, he discovers that he used to be a bully whose behavior left classmates frightened and hurt. His old friends, Aaron and Bear, expect him to return to their group, but Chase develops new friendships through the video club and an assisted living residence.</p>
+      <p>Working on a documentary about veteran Julius Solway, Chase earns Shoshanna Weber's trust, even though he once bullied her brother, Joel. A violent incident at school and Chase's decision to support a lie damage his new friendships. When he learns that he stole Mr. Solway's Medal of Honor before his accident, he recovers it, admits the theft, and faces the consequences. His friends and Mr. Solway support his second chance. By the end, Chase begins bringing his interests in football and filmmaking together while choosing a kinder, more honest life.</p>
+    </section>
     <div class="intro">
-      <div><h2>Read. Recall. Reflect.</h2><p>Read a chapter, check the summary, then try its question. Use quiz mode to hide the summaries. <strong>Spoilers throughout.</strong></p></div>
+      <div><h2>Each chapter</h2><p>Review the narrator, summary, highlights, and important lesson, then try the question. Use quiz mode to hide the chapter notes. <strong>Spoilers throughout, including the novel summary above.</strong></p></div>
       <div class="progress-box" hidden id="progressBox"><span id="progressText">0 of 30 reviewed</span><progress id="reviewProgress" value="0" max="30" aria-label="Chapters reviewed"></progress></div>
     </div>
     <div class="mobile-nav" hidden id="mobileNav"><label class="field-label" for="chapterJump">Jump to a chapter</label><select id="chapterJump"><option value="">Choose a chapter</option></select></div>
@@ -154,10 +169,17 @@
     <div id="chapters">
     <section>
       <h2>1 Chase Ambrose</h2>
+      <h3>Narrator</h3>
+      <p>Chase Ambrose</p>
       <h3>Summary</h3>
       <p>Chase wakes in the hospital after falling from his roof. He has amnesia and cannot recognize himself or his family. His only clear memory is a little girl wearing a blue dress. At home, his athletic trophies suggest success, but a photograph of him smashing pumpkins raises questions about his character.</p>
-      <h3>Key idea</h3>
-      <p>Identity: knowing your achievements is different from knowing your character.</p>
+      <h3>Highlights</h3>
+      <ul>
+        <li>Chase wakes with amnesia after falling from his roof; the girl in a blue dress is his only clear memory.</li>
+        <li>His trophies and a pumpkin-smashing photograph offer conflicting clues about his former character.</li>
+      </ul>
+      <h3>Important lesson</h3>
+      <p>Achievements and popularity do not reveal whether someone treats others well; character shows in behavior.</p>
       <h3>Review question</h3>
       <p>What does Chase remember, and what clues suggest he might not have been a kind person?</p>
       <h3>Answer guide</h3>
@@ -166,10 +188,17 @@
 
     <section>
       <h2>2 Shoshanna Weber</h2>
+      <h3>Narrator</h3>
+      <p>Shoshanna Weber</p>
       <h3>Summary</h3>
       <p>Shoshanna explains that Chase, Aaron, and Bear bullied her twin brother, Joel, until their parents sent him to boarding school. Their worst attack involved exploding cherry bombs inside a piano during his performance. When Chase smiles at her in a frozen yogurt shop, she interprets it as mockery and dumps yogurt over his head.</p>
-      <h3>Key idea</h3>
-      <p>Perspective: Chase has forgotten the harm, but the people he hurt have not.</p>
+      <h3>Highlights</h3>
+      <ul>
+        <li>Shoshanna reveals how Chase, Aaron, and Bear drove Joel away through sustained bullying.</li>
+        <li>She dumps frozen yogurt over Chase's head after mistaking his friendly smile for mockery.</li>
+      </ul>
+      <h3>Important lesson</h3>
+      <p>Forgetting the harm you caused does not erase its effects on others; understanding their perspective is essential.</p>
       <h3>Review question</h3>
       <p>Why does Chase's smile mean something completely different to Shoshanna than it does to him?</p>
       <h3>Answer guide</h3>
@@ -178,10 +207,17 @@
 
     <section>
       <h2>3 Chase Ambrose</h2>
+      <h3>Narrator</h3>
+      <p>Chase Ambrose</p>
       <h3>Summary</h3>
       <p>Chase returns to Hiawassee Middle School, where his football teammates welcome him enthusiastically while other students seem afraid. He tells Aaron and Bear about his amnesia. Principal Dr. Fitzwallace encourages him to treat his situation as an opportunity to rebuild himself, leaving Chase wondering what was wrong with his former self.</p>
-      <h3>Key idea</h3>
-      <p>Second chances: Chase can decide how to act without remembering his old habits.</p>
+      <h3>Highlights</h3>
+      <ul>
+        <li>Football teammates welcome Chase, but many other students react with fear.</li>
+        <li>Dr. Fitzwallace encourages Chase to see his future as a blank canvas.</li>
+      </ul>
+      <h3>Important lesson</h3>
+      <p>A second chance becomes meaningful when you choose better actions instead of simply returning to familiar habits.</p>
       <h3>Review question</h3>
       <p>What does the principal mean when he describes Chase's future as a blank canvas?</p>
       <h3>Answer guide</h3>
@@ -190,10 +226,17 @@
 
     <section>
       <h2>4 Brendan Espinoza</h2>
+      <h3>Narrator</h3>
+      <p>Brendan Espinoza</p>
       <h3>Summary</h3>
       <p>Brendan fears Chase because of his past bullying. When Chase unexpectedly sits with him at lunch, Brendan helps him cut his food because his injured arm makes eating difficult. Aaron and Bear humiliate Brendan by pulling away his chair, but Chase returns to help him up and apologize.</p>
-      <h3>Key idea</h3>
-      <p>Empathy: a small act of kindness begins to challenge an established reputation.</p>
+      <h3>Highlights</h3>
+      <ul>
+        <li>Brendan helps Chase eat lunch despite fearing him.</li>
+        <li>After Aaron and Bear pull away Brendan's chair, Chase helps him up and apologizes.</li>
+      </ul>
+      <h3>Important lesson</h3>
+      <p>Small acts of kindness can challenge a harmful reputation and begin building trust.</p>
       <h3>Review question</h3>
       <p>How does Chase's behavior differ from Aaron and Bear's behavior?</p>
       <h3>Answer guide</h3>
@@ -202,10 +245,17 @@
 
     <section>
       <h2>5 Chase Ambrose</h2>
+      <h3>Narrator</h3>
+      <p>Chase Ambrose</p>
       <h3>Summary</h3>
       <p>Chase catches his little half sister, Helene, when she falls at a playground, but she becomes terrified when she recognizes him. He discovers that he was sentenced to community service for the piano incident. Aaron and Bear dismiss it as harmless fun, while his mother explains the danger and panic it caused.</p>
-      <h3>Key idea</h3>
-      <p>Influence: other people offer competing versions of Chase's past.</p>
+      <h3>Highlights</h3>
+      <ul>
+        <li>Helene is terrified of Chase even after he catches her at the playground.</li>
+        <li>Chase learns about his community-service sentence, while his friends minimize the piano attack.</li>
+      </ul>
+      <h3>Important lesson</h3>
+      <p>Judge accounts of wrongdoing by their effects on the people harmed, especially when friends try to excuse it.</p>
       <h3>Review question</h3>
       <p>Why is it difficult for Chase to decide whose account of his past to trust?</p>
       <h3>Answer guide</h3>
@@ -214,10 +264,17 @@
 
     <section>
       <h2>6 Brendan Espinoza</h2>
+      <h3>Narrator</h3>
+      <p>Brendan Espinoza</p>
       <h3>Summary</h3>
       <p>When nobody else will help, Brendan recruits Chase to film him riding a tricycle through a car wash. They enjoy working together, and Chase proves talented with a camera. Brendan's good reputation helps them avoid serious trouble afterward. Impressed by Chase's friendliness and skill, Brendan invites him to video club.</p>
-      <h3>Key idea</h3>
-      <p>Reputation: respect earned through good behavior can matter more than popularity.</p>
+      <h3>Highlights</h3>
+      <ul>
+        <li>Chase films Brendan's tricycle ride through a car wash and discovers a talent for camerawork.</li>
+        <li>Brendan's good reputation helps them avoid serious trouble, and he invites Chase to video club.</li>
+      </ul>
+      <h3>Important lesson</h3>
+      <p>A reputation earned through kindness and responsibility can have more lasting value than popularity.</p>
       <h3>Review question</h3>
       <p>How does the car-wash incident show the importance of reputation?</p>
       <h3>Answer guide</h3>
@@ -226,10 +283,17 @@
 
     <section>
       <h2>7 Shoshanna Weber</h2>
+      <h3>Narrator</h3>
+      <p>Shoshanna Weber</p>
       <h3>Summary</h3>
       <p>The video club loves Brendan's new video until its members discover that Chase helped make it. Shoshanna strongly opposes his membership, but Ms. DeLeo insists that school clubs are open to everyone. Chase joins and receives an assignment covering sports for the video yearbook. Shoshanna keeps this development from Joel.</p>
-      <h3>Key idea</h3>
-      <p>Trust: access to a second chance does not immediately earn acceptance.</p>
+      <h3>Highlights</h3>
+      <ul>
+        <li>The club admires Brendan's video until it learns that Chase helped make it.</li>
+        <li>Ms. DeLeo allows Chase to join despite Shoshanna's strong objections.</li>
+      </ul>
+      <h3>Important lesson</h3>
+      <p>Offering someone a chance to participate is a beginning; rebuilding trust still takes consistent good behavior.</p>
       <h3>Review question</h3>
       <p>Why does Shoshanna struggle to accept Chase even when he behaves politely?</p>
       <h3>Answer guide</h3>
@@ -238,10 +302,17 @@
 
     <section>
       <h2>8 Chase Ambrose</h2>
+      <h3>Narrator</h3>
+      <p>Chase Ambrose</p>
       <h3>Summary</h3>
       <p>Chase films a football scrimmage while his father pressures him to return to the team. He entertains Helene by filming her dolls. Her excitement triggers a disturbing memory: he once ripped the head off her teddy bear. Although troubled, Chase begins minimizing the incident as his enthusiasm for football returns.</p>
-      <h3>Key idea</h3>
-      <p>Self-deception: Chase is tempted to excuse cruelty when his old status feels attractive.</p>
+      <h3>Highlights</h3>
+      <ul>
+        <li>Chase films football and Helene's dolls while his father pushes him toward the team.</li>
+        <li>He remembers destroying Helene's teddy bear, then begins excusing his cruelty.</li>
+      </ul>
+      <h3>Important lesson</h3>
+      <p>Wanting approval can tempt you to minimize harm; honest reflection requires taking even small cruelties seriously.</p>
       <h3>Review question</h3>
       <p>What does Chase's reaction to the teddy-bear memory reveal about his internal conflict?</p>
       <h3>Answer guide</h3>
@@ -250,10 +321,17 @@
 
     <section>
       <h2>9 Chase Ambrose</h2>
+      <h3>Narrator</h3>
+      <p>Chase Ambrose</p>
       <h3>Summary</h3>
       <p>Chase helps Hugo interview the football players, then voluntarily returns to community service with Aaron and Bear. Their disrespect toward the elderly residents bothers him. After Bear takes twenty dollars from a confused resident, Chase secretly replaces it with his own money. He meets Julius Solway, a Korean War Medal of Honor recipient.</p>
-      <h3>Key idea</h3>
-      <p>Integrity: doing the right thing can require a personal cost.</p>
+      <h3>Highlights</h3>
+      <ul>
+        <li>Chase returns voluntarily to community service and is disturbed by his friends' disrespect.</li>
+        <li>He replaces the twenty dollars Bear took and meets Medal of Honor recipient Julius Solway.</li>
+      </ul>
+      <h3>Important lesson</h3>
+      <p>Integrity means repairing harm even when it costs you something and brings no public recognition.</p>
       <h3>Review question</h3>
       <p>How does replacing the money demonstrate that Chase's values are changing?</p>
       <h3>Answer guide</h3>
@@ -262,10 +340,17 @@
 
     <section>
       <h2>10 Kimberly Tooley</h2>
+      <h3>Narrator</h3>
+      <p>Kimberly Tooley</p>
       <h3>Summary</h3>
       <p>Kimberly watches Chase stop the football players from bullying Brendan. His defense of the video club creates tension with his former teammates. Chase learns more about Joel and realizes he participated in the bullying. Kimberly, who has a crush on Chase, decides to join video club to spend time with him.</p>
-      <h3>Key idea</h3>
-      <p>Belonging: defending someone can challenge the loyalties of your usual group.</p>
+      <h3>Highlights</h3>
+      <ul>
+        <li>Chase defends Brendan against football players and identifies himself with video club.</li>
+        <li>He learns more about his role in bullying Joel; Kimberly joins the club to be near Chase.</li>
+      </ul>
+      <h3>Important lesson</h3>
+      <p>Standing up for someone may challenge your group's expectations, but loyalty should not require supporting cruelty.</p>
       <h3>Review question</h3>
       <p>Why does Chase's use of “we” when referring to video club upset the football players?</p>
       <h3>Answer guide</h3>
@@ -274,10 +359,17 @@
 
     <section>
       <h2>11 Aaron Hakimian</h2>
+      <h3>Narrator</h3>
+      <p>Aaron Hakimian</p>
       <h3>Summary</h3>
       <p>Aaron feels hurt and confused by Chase's new personality and friendships. He and Bear worry about a valuable object Chase possesses that they consider partly theirs. They hesitate to confront him because revealing their secret could encourage him to report them. Chase's friendship with Mr. Solway especially worries them.</p>
-      <h3>Key idea</h3>
-      <p>Suspense: a new narrator reveals a secret that Chase does not understand.</p>
+      <h3>Highlights</h3>
+      <ul>
+        <li>Aaron describes feeling abandoned by Chase's new friendships.</li>
+        <li>He and Bear worry that Chase's memory and friendship with Mr. Solway could expose a valuable secret.</li>
+      </ul>
+      <h3>Important lesson</h3>
+      <p>Pressure presented as friendship can hide self-interest; consider what someone stands to gain from your choices.</p>
       <h3>Review question</h3>
       <p>How does Aaron's narration reveal motives that Chase does not understand?</p>
       <h3>Answer guide</h3>
@@ -286,10 +378,17 @@
 
     <section>
       <h2>12 Chase Ambrose</h2>
+      <h3>Narrator</h3>
+      <p>Chase Ambrose</p>
       <h3>Summary</h3>
       <p>Returning memories expose Chase's former cruelty, including his contempt for his older brother. His doctor continues to prohibit football. Chase grows closer to Mr. Solway, whose medal is missing and who cannot remember the wartime action that earned it. Chase recommends him as the subject of Shoshanna's video journalism contest entry.</p>
-      <h3>Key idea</h3>
-      <p>Memory and identity: both Chase and Mr. Solway have important gaps in their pasts.</p>
+      <h3>Highlights</h3>
+      <ul>
+        <li>Chase confronts more memories of cruelty while his doctor continues to prohibit football.</li>
+        <li>He learns that Mr. Solway's medal is missing and suggests him as Shoshanna's documentary subject.</li>
+      </ul>
+      <h3>Important lesson</h3>
+      <p>Listening and companionship can help people connect even when their ages and experiences are very different.</p>
       <h3>Review question</h3>
       <p>What similarities connect Chase and Mr. Solway despite their different ages?</p>
       <h3>Answer guide</h3>
@@ -298,10 +397,17 @@
 
     <section>
       <h2>13 Shoshanna Weber</h2>
+      <h3>Narrator</h3>
+      <p>Shoshanna Weber</p>
       <h3>Summary</h3>
       <p>Shoshanna reluctantly investigates Chase's suggestion and visits Mr. Solway. He refuses to participate in her project until Chase arrives. Because Mr. Solway trusts Chase, he agrees to help them together. Shoshanna must accept a partnership with the person she blames for her brother's suffering.</p>
-      <h3>Key idea</h3>
-      <p>Cooperation: a shared goal forces Shoshanna to reconsider her assumptions.</p>
+      <h3>Highlights</h3>
+      <ul>
+        <li>Mr. Solway initially refuses Shoshanna's interview request.</li>
+        <li>His trust in Chase makes a joint documentary project possible.</li>
+      </ul>
+      <h3>Important lesson</h3>
+      <p>Working toward a shared goal can create an opportunity to reassess someone through firsthand experience.</p>
       <h3>Review question</h3>
       <p>Why does Mr. Solway's trust in Chase create a problem for Shoshanna?</p>
       <h3>Answer guide</h3>
@@ -310,10 +416,17 @@
 
     <section>
       <h2>14 Chase Ambrose</h2>
+      <h3>Narrator</h3>
+      <p>Chase Ambrose</p>
       <h3>Summary</h3>
       <p>Chase's father proposes a second medical opinion that might allow him to play football. Chase and Shoshanna collect compelling interviews with Mr. Solway, whose spirits improve through their visits. They discover his empty medal case. Chase suspects theft and wonders whether Aaron and Bear are responsible.</p>
-      <h3>Key idea</h3>
-      <p>Suspicion: past conduct influences whom Chase considers trustworthy.</p>
+      <h3>Highlights</h3>
+      <ul>
+        <li>Interviews with Chase and Shoshanna lift Mr. Solway's spirits.</li>
+        <li>An empty medal case leads Chase to suspect Aaron and Bear of theft.</li>
+      </ul>
+      <h3>Important lesson</h3>
+      <p>Past behavior can justify concern, but suspicion alone does not establish who is responsible.</p>
       <h3>Review question</h3>
       <p>What evidence makes Chase suspect his friends of stealing the medal?</p>
       <h3>Answer guide</h3>
@@ -322,10 +435,17 @@
 
     <section>
       <h2>15 Brendan Espinoza</h2>
+      <h3>Narrator</h3>
+      <p>Brendan Espinoza</p>
       <h3>Summary</h3>
       <p>Brendan wants to impress Kimberly, but she remains interested in Chase. He recruits both of them for a video called Leaf Man, covering himself in syrup before skating into a pile of leaves. The stunt becomes chaotic when dogs swarm him. Despite his disappointment, Brendan recognizes that jealousy would make him unfair to Chase.</p>
-      <h3>Key idea</h3>
-      <p>Friendship: jealousy does not justify blaming an innocent friend.</p>
+      <h3>Highlights</h3>
+      <ul>
+        <li>Brendan films Leaf Man, a syrup-and-leaves stunt that attracts a pack of dogs.</li>
+        <li>Despite his jealousy over Kimberly, he recognizes Chase's genuine friendship.</li>
+      </ul>
+      <h3>Important lesson</h3>
+      <p>Jealousy is a feeling to manage, not a reason to blame or mistreat a friend.</p>
       <h3>Review question</h3>
       <p>How does Brendan handle his conflicting feelings about Chase and Kimberly?</p>
       <h3>Answer guide</h3>
@@ -334,10 +454,17 @@
 
     <section>
       <h2>16 Shoshanna Weber</h2>
+      <h3>Narrator</h3>
+      <p>Shoshanna Weber</p>
       <h3>Summary</h3>
       <p>Working with Chase changes Shoshanna's opinion of him. When her mother discovers them together, her parents react angrily because of his treatment of Joel. Shoshanna argues that Chase has truly changed. She suggests that Joel should return home because the main reason for sending him away may no longer exist.</p>
-      <h3>Key idea</h3>
-      <p>Changing judgments: direct experience challenges even deeply rooted anger.</p>
+      <h3>Highlights</h3>
+      <ul>
+        <li>Shoshanna defends Chase when her parents discover their documentary partnership.</li>
+        <li>She suggests that Joel may now be able to return home.</li>
+      </ul>
+      <h3>Important lesson</h3>
+      <p>Revising a judgment takes courage when new, consistent evidence challenges an understandable past belief.</p>
       <h3>Review question</h3>
       <p>What makes Shoshanna willing to defend Chase to her parents?</p>
       <h3>Answer guide</h3>
@@ -346,10 +473,17 @@
 
     <section>
       <h2>17 Joel Weber</h2>
+      <h3>Narrator</h3>
+      <p>Joel Weber</p>
       <h3>Summary</h3>
       <p>Joel returns home but remains anxious about school and resentful of everyone's enthusiasm for Chase. He explains that bullying creates constant fear, even between attacks. At video club, Chase sincerely apologizes. Joel believes the amnesia and the apology are real, but that does not erase his anger or pain.</p>
-      <h3>Key idea</h3>
-      <p>Forgiveness: recognizing change does not make painful experiences disappear.</p>
+      <h3>Highlights</h3>
+      <ul>
+        <li>Joel returns home but explains how bullying creates fear even between attacks.</li>
+        <li>He believes Chase's apology is sincere while still feeling anger toward him.</li>
+      </ul>
+      <h3>Important lesson</h3>
+      <p>An apology does not erase trauma or create an obligation to forgive; recovery and trust take time.</p>
       <h3>Review question</h3>
       <p>Why can Joel believe Chase has changed and still hate him?</p>
       <h3>Answer guide</h3>
@@ -358,10 +492,17 @@
 
     <section>
       <h2>18 Chase Ambrose</h2>
+      <h3>Narrator</h3>
+      <p>Chase Ambrose</p>
       <h3>Summary</h3>
       <p>A court document and Brendan's account of a lasting injury force Chase to confront the seriousness of his bullying. Hearing Joel play piano deepens his shame about targeting him. Small signs suggest the Webers are beginning to accept him. Chase and Shoshanna finish their documentary, Warrior, and she invites him into her home.</p>
-      <h3>Key idea</h3>
-      <p>Repairing trust: acceptance grows through repeated actions and small gestures.</p>
+      <h3>Highlights</h3>
+      <ul>
+        <li>A court document and Brendan's lasting injury deepen Chase's understanding of his bullying.</li>
+        <li>Chase and Shoshanna finish Warrior as small gestures signal growing acceptance from the Webers.</li>
+      </ul>
+      <h3>Important lesson</h3>
+      <p>Trust is repaired through repeated actions, and small gestures of acceptance can mark meaningful progress.</p>
       <h3>Review question</h3>
       <p>Why are the Webers' small gestures of acceptance so meaningful to Chase?</p>
       <h3>Answer guide</h3>
@@ -370,10 +511,17 @@
 
     <section>
       <h2>19 Bear Bratsky</h2>
+      <h3>Narrator</h3>
+      <p>Bear Bratsky</p>
       <h3>Summary</h3>
       <p>The school celebrates Warrior at an assembly, making Bear and Aaron jealous and resentful. They interpret Chase's success as rejection of their friendship. His connection to Mr. Solway also threatens their hidden interests. Aaron proposes a plan to pull Chase back toward them.</p>
-      <h3>Key idea</h3>
-      <p>Narrator bias: Bear's resentment shapes his description of a successful project.</p>
+      <h3>Highlights</h3>
+      <ul>
+        <li>Warrior receives a standing ovation at a school assembly.</li>
+        <li>Bear and Aaron resent Chase's success, and Aaron proposes a plan to draw him back.</li>
+      </ul>
+      <h3>Important lesson</h3>
+      <p>Resentment can distort how we describe events; compare a narrator's opinions with the evidence.</p>
       <h3>Review question</h3>
       <p>How does Bear's account show that a narrator's opinions can distort events?</p>
       <h3>Answer guide</h3>
@@ -382,10 +530,17 @@
 
     <section>
       <h2>20 Brendan Espinoza</h2>
+      <h3>Narrator</h3>
+      <p>Brendan Espinoza</p>
       <h3>Summary</h3>
       <p>While Brendan films One Man Band with Joel and Kimberly, Aaron and Bear attack with fire extinguishers and damage instruments. They falsely claim Chase planned it. Summoned by Kimberly, Chase tries to stop them, but accidentally strikes Joel while struggling with Bear over an extinguisher. The arriving teachers see a scene that makes Chase appear guilty.</p>
-      <h3>Key idea</h3>
-      <p>Appearance and reality: incomplete evidence can produce a convincing false conclusion.</p>
+      <h3>Highlights</h3>
+      <ul>
+        <li>Aaron and Bear attack the music-room group with fire extinguishers and blame Chase.</li>
+        <li>Chase tries to intervene but accidentally strikes Joel while struggling with Bear.</li>
+      </ul>
+      <h3>Important lesson</h3>
+      <p>An alarming scene can still be misleading; fair judgment requires understanding the sequence of events.</p>
       <h3>Review question</h3>
       <p>Which details make an attempted rescue look like a deliberate attack?</p>
       <h3>Answer guide</h3>
@@ -394,10 +549,17 @@
 
     <section>
       <h2>21 Chase Ambrose</h2>
+      <h3>Narrator</h3>
+      <p>Chase Ambrose</p>
       <h3>Summary</h3>
       <p>Aaron invents a story about an electrical fire to excuse the destruction. Chase supports the lie to escape punishment, sacrificing his honesty. Ms. DeLeo removes him from video club, and his new friends withdraw their trust. Another doctor clears him for football, but Chase realizes that the life he wants is the one he has just lost.</p>
-      <h3>Key idea</h3>
-      <p>Accountability: being falsely accused does not excuse a separate dishonest choice.</p>
+      <h3>Highlights</h3>
+      <ul>
+        <li>Chase supports Aaron's false electrical-fire story to avoid punishment.</li>
+        <li>He loses the video club's trust and realizes returning to football cannot replace those friendships.</li>
+      </ul>
+      <h3>Important lesson</h3>
+      <p>Being wrongly accused of one act does not excuse a separate lie; protecting yourself dishonestly can harm others.</p>
       <h3>Review question</h3>
       <p>Why is Chase responsible for damaging his friendships even though he did not plan the attack?</p>
       <h3>Answer guide</h3>
@@ -406,10 +568,17 @@
 
     <section>
       <h2>22 Shoshanna Weber</h2>
+      <h3>Narrator</h3>
+      <p>Shoshanna Weber</p>
       <h3>Summary</h3>
       <p>Shoshanna feels betrayed by Chase and guilty for encouraging Joel to return. She rejects Brendan's suggestion that the injury might have been accidental. The club clearly misses Chase's contributions. Joel surprises everyone by asserting that he can handle hearing Chase's name and will not be driven away again.</p>
-      <h3>Key idea</h3>
-      <p>Resilience: Joel begins separating his future from the power of his former bullies.</p>
+      <h3>Highlights</h3>
+      <ul>
+        <li>Shoshanna feels betrayed and rejects the possibility that Joel's injury was accidental.</li>
+        <li>Joel insists that he will stay home and can handle hearing Chase's name.</li>
+      </ul>
+      <h3>Important lesson</h3>
+      <p>Supporting someone includes respecting their growing independence instead of assuming they must always be protected.</p>
       <h3>Review question</h3>
       <p>How does Joel demonstrate growing confidence and independence?</p>
       <h3>Answer guide</h3>
@@ -418,10 +587,17 @@
 
     <section>
       <h2>23 Chase Ambrose</h2>
+      <h3>Narrator</h3>
+      <p>Chase Ambrose</p>
       <h3>Summary</h3>
       <p>Chase discovers that he still enjoys football, but refuses to restore his friendship with Aaron and Bear. They confront him violently and demand their share of Mr. Solway's medal. Chase accuses them of stealing it, only to learn that he was the thief. A returning memory confirms the accusation, and he vows to return it.</p>
-      <h3>Key idea</h3>
-      <p>Identity and responsibility: Chase must confront his own wrongdoing, not only his friends'.</p>
+      <h3>Highlights</h3>
+      <ul>
+        <li>Aaron and Bear demand their share of the medal and reveal that Chase stole it.</li>
+        <li>A returning memory confirms his guilt, and Chase vows to return the medal.</li>
+      </ul>
+      <h3>Important lesson</h3>
+      <p>Personal growth includes accepting responsibility for your own past actions, even when they conflict with who you want to be.</p>
       <h3>Review question</h3>
       <p>How does this discovery challenge Chase's division between his “old” and “new” selves?</p>
       <h3>Answer guide</h3>
@@ -430,10 +606,17 @@
 
     <section>
       <h2>24 Brendan Espinoza</h2>
+      <h3>Narrator</h3>
+      <p>Brendan Espinoza</p>
       <h3>Summary</h3>
       <p>Brendan misses Chase and questions how quickly the club rejected him. While preparing another project, he discovers that the camera still contains footage of the music-room incident. It shows Chase trying to stop the attack and accidentally injuring Joel. Brendan invites the others over to watch the evidence.</p>
-      <h3>Key idea</h3>
-      <p>Evidence: reviewing what happened can correct judgments shaped by reputation.</p>
+      <h3>Highlights</h3>
+      <ul>
+        <li>Brendan discovers footage of the music-room attack still on his camera.</li>
+        <li>The recording shows that Chase tried to help and that Joel's injury was accidental.</li>
+      </ul>
+      <h3>Important lesson</h3>
+      <p>Be willing to revise a judgment when evidence changes, while keeping separate wrongdoings distinct.</p>
       <h3>Review question</h3>
       <p>What can the recording prove, and what wrongdoing does it leave unchanged?</p>
       <h3>Answer guide</h3>
@@ -442,10 +625,17 @@
 
     <section>
       <h2>25 Chase Ambrose</h2>
+      <h3>Narrator</h3>
+      <p>Chase Ambrose</p>
       <h3>Summary</h3>
       <p>Chase recognizes the girl from his remaining memory in a painting being moved from his neighbors' house. Realizing he could have seen it from his roof, he climbs up and finds the hidden medal. He remembers falling while trying to photograph his neighbor doing yoga. He heads to return the medal instead of attending Brendan's gathering.</p>
-      <h3>Key idea</h3>
-      <p>Resolution of a mystery: the remembered image connects the medal's hiding place to the fall.</p>
+      <h3>Highlights</h3>
+      <ul>
+        <li>A neighbor's painting explains Chase's lingering image of the girl in blue.</li>
+        <li>He finds the medal on his roof, remembers the fall, and sets out to return what he stole.</li>
+      </ul>
+      <h3>Important lesson</h3>
+      <p>Recognizing a past wrong matters most when it leads to concrete action to repair the harm.</p>
       <h3>Review question</h3>
       <p>How does the painting connect the memory mystery, the stolen medal, and Chase's accident?</p>
       <h3>Answer guide</h3>
@@ -454,10 +644,17 @@
 
     <section>
       <h2>26 Joel Weber</h2>
+      <h3>Narrator</h3>
+      <p>Joel Weber</p>
       <h3>Summary</h3>
       <p>Joel insists on watching Brendan's recording despite Shoshanna's objections. It convinces him that Chase's blow was accidental. Watching himself being bullied also helps Joel recognize that those experiences do not have to define him. The group learns that Chase has gone to Portland Street and follows him there.</p>
-      <h3>Key idea</h3>
-      <p>Agency: Joel chooses to examine the truth rather than let fear decide for him.</p>
+      <h3>Highlights</h3>
+      <ul>
+        <li>Joel chooses to watch the recording and accepts that Chase injured him accidentally.</li>
+        <li>The club follows Chase after learning that he has gone to Portland Street.</li>
+      </ul>
+      <h3>Important lesson</h3>
+      <p>Facing painful evidence on your own terms can help you reclaim control over your story and decisions.</p>
       <h3>Review question</h3>
       <p>How does Joel's response to the recording show emotional growth?</p>
       <h3>Answer guide</h3>
@@ -466,10 +663,17 @@
 
     <section>
       <h2>27 Aaron Hakimian</h2>
+      <h3>Narrator</h3>
+      <p>Aaron Hakimian</p>
       <h3>Summary</h3>
       <p>Aaron and Bear intercept Chase at the assisted living residence and discover he has recovered the medal. They try to take it, still claiming a share of its value. Chase lets a vacuum cleaner suck up the medal, then escapes carrying the machine. His former friends pursue him.</p>
-      <h3>Key idea</h3>
-      <p>Moral courage: Chase acts on his promise even when his former friends threaten him.</p>
+      <h3>Highlights</h3>
+      <ul>
+        <li>Aaron and Bear try to seize the recovered medal at the assisted living residence.</li>
+        <li>Chase protects it in a vacuum cleaner and escapes with the machine.</li>
+      </ul>
+      <h3>Important lesson</h3>
+      <p>Moral courage means following through on a promise to do right even under pressure from former friends.</p>
       <h3>Review question</h3>
       <p>What does Chase's determination to return the medal reveal about his priorities?</p>
       <h3>Answer guide</h3>
@@ -478,10 +682,17 @@
 
     <section>
       <h2>28 Shoshanna Weber</h2>
+      <h3>Narrator</h3>
+      <p>Shoshanna Weber</p>
       <h3>Summary</h3>
       <p>The video club members arrive during Aaron and Bear's assault on Chase and help defend him. Mr. Solway intervenes, while Joel brings staff and security. Chase retrieves the medal from the vacuum and admits stealing it. He accepts responsibility rather than blaming his amnesia, and Nurse Duncan calls the police.</p>
-      <h3>Key idea</h3>
-      <p>Honesty: doing better includes owning actions that cannot be undone.</p>
+      <h3>Highlights</h3>
+      <ul>
+        <li>The video club helps defend Chase; Mr. Solway, staff, and security intervene.</li>
+        <li>Chase retrieves the medal, admits the theft, and faces police involvement.</li>
+      </ul>
+      <h3>Important lesson</h3>
+      <p>Honest accountability means acknowledging harm and accepting consequences instead of hiding behind an excuse.</p>
       <h3>Review question</h3>
       <p>Why is Chase's admission important evidence of change, even though it leads to trouble?</p>
       <h3>Answer guide</h3>
@@ -490,10 +701,17 @@
 
     <section>
       <h2>29 Chase Ambrose</h2>
+      <h3>Narrator</h3>
+      <p>Chase Ambrose</p>
       <h3>Summary</h3>
       <p>At his hearing, Chase discovers that classmates, teachers, and even the Webers have come to support him. He refuses to guarantee that his former cruelty is gone forever because he cannot honestly know. Mr. Solway arrives and claims he loaned Chase the medal. With that intervention and the community's support, the judge dismisses the charge.</p>
-      <h3>Key idea</h3>
-      <p>Second chances: Chase's growth is shown through honesty and relationships, not a claim of perfection.</p>
+      <h3>Highlights</h3>
+      <ul>
+        <li>Classmates, teachers, and the Webers support Chase at his hearing.</li>
+        <li>Chase refuses to promise perfection; Mr. Solway claims he loaned the medal, and the charge is dismissed.</li>
+      </ul>
+      <h3>Important lesson</h3>
+      <p>Credible change rests on honesty and sustained actions, including admitting that you must keep making better choices.</p>
       <h3>Review question</h3>
       <p>How does Chase's honesty here contrast with his lie in the principal's office?</p>
       <h3>Answer guide</h3>
@@ -502,10 +720,17 @@
 
     <section>
       <h2>30 Brendan Espinoza</h2>
+      <h3>Narrator</h3>
+      <p>Brendan Espinoza</p>
       <h3>Summary</h3>
       <p>Chase returns to video club while also succeeding in football, and the groups become more connected. Warrior wins the national contest; Ms. DeLeo works to restore Shoshanna's credit after she previously removed her name. Kimberly and Brendan become a couple, and his tuba footage goes viral. Brendan recognizes that friendship matters more than fame.</p>
-      <h3>Key idea</h3>
-      <p>Belonging: Chase can retain his athletic interests while choosing better relationships and behavior.</p>
+      <h3>Highlights</h3>
+      <ul>
+        <li>Chase balances football and video club as the groups become more connected.</li>
+        <li>Warrior wins the national contest, and Brendan values his friendships more than viral fame.</li>
+      </ul>
+      <h3>Important lesson</h3>
+      <p>A better identity can include your existing talents and interests when you pursue them with kindness and healthier relationships.</p>
       <h3>Review question</h3>
       <p>How does the ending show that Chase can build a new identity without abandoning all his former interests?</p>
       <h3>Answer guide</h3>
@@ -552,9 +777,12 @@
         title.append(titleText);
         const body = make('div', 'chapter-body');
         const recap = make('div', 'recap');
-        recap.append(make('h3', '', 'What happens'), ...(parts['Summary'] || []));
+        recap.append(make('h3', '', 'Narrator'), ...(parts['Narrator'] || []));
+        recap.append(make('h3', '', 'Summary'), ...(parts['Summary'] || []));
+        recap.append(make('h3', '', 'Highlights'), ...(parts['Highlights'] || []));
+        recap.querySelectorAll('ul').forEach(list => list.classList.add('highlights'));
         const idea = make('div', 'key-idea');
-        idea.append(...(parts['Key idea'] || []));
+        idea.append(make('h3', '', 'Important lesson'), ...(parts['Important lesson'] || []));
         recap.append(idea);
         const question = make('div', 'question');
         question.append(make('h3', '', 'Check your understanding'), ...(parts['Review question'] || []));
@@ -619,7 +847,7 @@
         $('quizToggle').textContent = active ? 'Exit quiz mode' : 'Quiz mode';
         document.body.classList.toggle('quiz-mode', active);
         chapters.forEach(ch => ch.answer.open = false);
-        $('modeHint').textContent = active ? 'Summaries are hidden. Try each question before revealing its answer guide.' : 'Open a chapter to begin. Answer guides are hidden until you reveal them.';
+        $('modeHint').textContent = active ? 'Chapter notes are hidden. Try each question before revealing its answer guide.' : 'Open a chapter to begin. Answer guides are hidden until you reveal them.';
       });
       function jumpToHash() {
         const target = chapters.find(ch => `#${ch.card.id}` === location.hash);

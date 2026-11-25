@@ -25,9 +25,11 @@ Open `aligned_reader/index.html` after the build. Audio files remain external to
 the HTML in `aligned_reader/audio/`, so keep that directory beside the page.
 Search is available from the magnifying-glass button or with Ctrl/Cmd+F.
 The reader's **Chapter study guide** link opens [study-guide.html](study-guide.html),
-a separate, offline-ready page with summaries for all 30 chapters, narrator filters,
-search, review questions, revealable answer guides, quiz mode, and saved review
-progress. Use **Print / Save PDF** for a complete copy of all chapters and answers.
+a separate, offline-ready page with the novel's main theme and overall summary.
+Each of its 30 chapters includes **Narrator**, **Summary**, **Highlights**, and
+**Important lesson**, followed by a review question and revealable answer guide.
+Narrator filters, search, quiz mode, and saved review progress support revision.
+Use **Print / Save PDF** for a complete copy of the overview, chapters, and answers.
 The editable study content and page template are in `study/`.
 Regenerate the page with the installed Chapter Tutorial HTML skill:
 

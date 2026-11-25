@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#152b29">
-  <meta name="description" content="Review all 30 chapters of Gordon Korman's Restart with summaries, narrator viewpoints, review questions, and answer guides.">
+  <meta name="description" content="Explore Restart by Gordon Korman: the novel's main theme and summary, plus each chapter's narrator, summary, highlights, and important lesson.">
   <link rel="icon" href="data:,">
   <title>{{PAGE_TITLE}}</title>
   <style>
@@ -42,6 +42,10 @@
     h1 { margin:8px 0 12px; font:700 clamp(3rem,6vw,5rem)/1 Georgia,serif; letter-spacing:-.055em; }
     .hero-sub { margin:0; max-width:540px; font-size:1.125rem; color:#37564a; }
     .hero-meta { display:flex; flex-wrap:wrap; gap:10px 24px; margin-top:26px; font-size:.875rem; font-weight:650; }
+    .novel-overview { margin-top:22px; padding:26px; border:1px solid var(--line); border-radius:12px; background:var(--paper); }
+    .novel-overview h2 { margin:0 0 8px; color:#446257; font-size:1rem; }
+    .novel-overview p { margin:0 0 22px; max-width:80ch; }
+    .novel-overview p:last-child { margin-bottom:0; }
     .intro { display:grid; grid-template-columns:1fr auto; gap:24px; align-items:center; margin:26px 0; }
     .intro h2 { margin:0 0 5px; font-size:1.125rem; }
     .intro p { margin:0; color:var(--muted); }
@@ -73,6 +77,8 @@
     .chapter-body { border-top:1px solid #e5ece6; padding:23px 26px 24px; }
     .chapter-body h3 { margin:0 0 8px; color:#446257; font-size:.875rem; letter-spacing:.065em; text-transform:uppercase; }
     .chapter-body p { margin:0 0 17px; }
+    .highlights { margin:0 0 22px; padding-left:22px; }
+    .highlights li+li { margin-top:6px; }
     .key-idea { margin:0 0 24px; padding:12px 16px; border-left:3px solid #83aa8d; background:#f2f7f2; color:#37584b; font-size:.9375rem; }
     .key-idea p { margin:0; }
     .question { padding:20px; border:1px solid #dae4dd; border-radius:9px; background:#f8faf8; }
@@ -95,6 +101,7 @@
       .sidebar { display:none; } .page { margin:0; padding:18px 16px 40px; }
       .topline { margin-bottom:18px; gap:10px; } .hero { padding:28px 24px; }
       .hero::after { right:-215px; } .hero-sub { font-size:1rem; }
+      .novel-overview { padding:20px 18px; }
       .intro { grid-template-columns:1fr; gap:14px; margin:22px 0; } .progress-box { width:100%; }
       .mobile-nav { display:block; margin-bottom:14px; }
       .tools { padding:14px; } .actions { gap:7px; } .actions .spacer { display:none; }
@@ -108,6 +115,7 @@
       .sidebar,.topline,.tools,.mobile-nav,.progress-box,.result-line,.review-label,.footer,.empty,.skip { display:none !important; }
       .page { margin:0; padding:0; max-width:none; } .hero { padding:0 0 20px; border:0; background:none; }
       .hero::after { display:none; } h1 { font-size:38pt; } .hero-meta { margin-top:10px; }
+      .novel-overview { padding:0; border:0; } .novel-overview h2 { break-after:avoid; }
       .intro { display:block; margin:15px 0; } .intro p { color:#333; }
       .chapter { break-inside:avoid; margin:14px 0; border:1px solid #bbb; }
       .chapter[hidden] { display:block !important; } .chapter>summary { padding:12px 16px; }
@@ -127,13 +135,20 @@
   <main class="page" id="main">
     <div class="topline"><span><a href="content.html">Contents</a> / Chapter study guide</span><a href="aligned_reader/index.html">Read the book</a></div>
     <header class="hero">
-      <p class="eyebrow">A study companion</p>
+      <p class="eyebrow">Novel</p>
       <h1>Restart</h1>
       <p class="hero-sub">One story. Many perspectives. Explore how Chase's choices change the person he becomes.</p>
-      <div class="hero-meta"><span>Gordon Korman</span><span>30 chapters</span><span>Review &amp; discussion</span></div>
+      <div class="hero-meta"><span>Gordon Korman</span><span>30 chapters</span><span>Contains spoilers</span></div>
     </header>
+    <section class="novel-overview" aria-label="Novel overview">
+      <h2>Main theme</h2>
+      <p>People can change through the choices they make. Chase's second chance shows that building a better identity requires empathy, honesty, and responsibility for past harm. Trust and forgiveness grow through consistent actions.</p>
+      <h2>Summary</h2>
+      <p>In Gordon Korman's <em>Restart</em>, middle school football star Chase Ambrose loses his memory after falling from his roof. As he returns to school, he discovers that he used to be a bully whose behavior left classmates frightened and hurt. His old friends, Aaron and Bear, expect him to return to their group, but Chase develops new friendships through the video club and an assisted living residence.</p>
+      <p>Working on a documentary about veteran Julius Solway, Chase earns Shoshanna Weber's trust, even though he once bullied her brother, Joel. A violent incident at school and Chase's decision to support a lie damage his new friendships. When he learns that he stole Mr. Solway's Medal of Honor before his accident, he recovers it, admits the theft, and faces the consequences. His friends and Mr. Solway support his second chance. By the end, Chase begins bringing his interests in football and filmmaking together while choosing a kinder, more honest life.</p>
+    </section>
     <div class="intro">
-      <div><h2>Read. Recall. Reflect.</h2><p>Read a chapter, check the summary, then try its question. Use quiz mode to hide the summaries. <strong>Spoilers throughout.</strong></p></div>
+      <div><h2>Each chapter</h2><p>Review the narrator, summary, highlights, and important lesson, then try the question. Use quiz mode to hide the chapter notes. <strong>Spoilers throughout, including the novel summary above.</strong></p></div>
       <div class="progress-box" hidden id="progressBox"><span id="progressText">0 of 30 reviewed</span><progress id="reviewProgress" value="0" max="30" aria-label="Chapters reviewed"></progress></div>
     </div>
     <div class="mobile-nav" hidden id="mobileNav"><label class="field-label" for="chapterJump">Jump to a chapter</label><select id="chapterJump"><option value="">Choose a chapter</option></select></div>
@@ -194,9 +209,12 @@
         title.append(titleText);
         const body = make('div', 'chapter-body');
         const recap = make('div', 'recap');
-        recap.append(make('h3', '', 'What happens'), ...(parts['Summary'] || []));
+        recap.append(make('h3', '', 'Narrator'), ...(parts['Narrator'] || []));
+        recap.append(make('h3', '', 'Summary'), ...(parts['Summary'] || []));
+        recap.append(make('h3', '', 'Highlights'), ...(parts['Highlights'] || []));
+        recap.querySelectorAll('ul').forEach(list => list.classList.add('highlights'));
         const idea = make('div', 'key-idea');
-        idea.append(...(parts['Key idea'] || []));
+        idea.append(make('h3', '', 'Important lesson'), ...(parts['Important lesson'] || []));
         recap.append(idea);
         const question = make('div', 'question');
         question.append(make('h3', '', 'Check your understanding'), ...(parts['Review question'] || []));
@@ -261,7 +279,7 @@
         $('quizToggle').textContent = active ? 'Exit quiz mode' : 'Quiz mode';
         document.body.classList.toggle('quiz-mode', active);
         chapters.forEach(ch => ch.answer.open = false);
-        $('modeHint').textContent = active ? 'Summaries are hidden. Try each question before revealing its answer guide.' : 'Open a chapter to begin. Answer guides are hidden until you reveal them.';
+        $('modeHint').textContent = active ? 'Chapter notes are hidden. Try each question before revealing its answer guide.' : 'Open a chapter to begin. Answer guides are hidden until you reveal them.';
       });
       function jumpToHash() {
         const target = chapters.find(ch => `#${ch.card.id}` === location.hash);
